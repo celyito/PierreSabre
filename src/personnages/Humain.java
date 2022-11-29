@@ -1,10 +1,11 @@
 package personnages;
 
+
 public class Humain {
 	
-	protected String nom;
-	protected String boisson;
-	protected int argent;
+	private String nom;
+	private String boisson;
+	private int argent;
 	
 	public Humain(String nom, String boisson, int argent) {
 		this.nom = nom;
@@ -40,11 +41,11 @@ public class Humain {
 	public void acheter (String bien, int prix) {
 		
 		if (prix<=argent) {
-			parler("J'ai "+argent+" je vais pouvoir m'offrir "+bien+"  "+prix+" sous.");
+			parler("J'ai "+ argent +" sous en poche. Je vais pouvoir m'offrir "+bien+" à "+prix+" sous.");
 			argent-=prix;
 		}
 		else {
-			parler("Je n'ai plus que "+argent+" sous en poche. Je ne peux m�me pas m'offrir "+bien+"  "+prix+" sous.");
+			parler("Je n'ai plus que "+argent+" sous en poche. Je ne peux mêxme pas m'offrir "+bien+" à "+prix+" sous.");
 		}
 		
 	}
